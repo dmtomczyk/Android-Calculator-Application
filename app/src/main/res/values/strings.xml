@@ -1,5 +1,33 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="eight">8</string>
+
+    <!--First number row-->
+    <string name="AC">AC</string>
+    <string name="flipSign">+/-</string>
+    <string name="remainder">%</string>
+    <string name="divison">/</string>
+
+    <!--Second number row-->
     <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="multiplication">X</string>
+
+    <!--Third number row-->
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="subtraction">-</string>
+
+    <!--Fourth number row-->
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="addition">+</string>
+
+    <!--Fifth number row-->
+    <string name="zero">0</string>
+    <string name="decimal">.</string>
+    <string name="equals">=</string>
+
 </resources>
