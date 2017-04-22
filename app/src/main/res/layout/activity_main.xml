@@ -6,166 +6,196 @@
     android:layout_height="match_parent"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="100">
 
     <!--This is for the number view-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="25">
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="@string/zero"
             android:textAlignment="viewEnd"
             android:textColor="@android:color/black"
-            android:textSize="32sp" />
+            android:textSize="60sp"/>
     </LinearLayout>
 
     <!--This is for AC, +/-, Remainder, and division-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="15">
 
         <Button
             android:id="@+id/AC"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/AC" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/AC"
+            android:onClick="onClickSigns"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/flipSign"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/flipSign" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/flipSign"
+            android:onClick="onClickSigns"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/remainder"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/remainder" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/remainder"
+            android:onClick="onClickSigns"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/division"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/divison" /> </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/divison"
+            android:onClick="onClickSigns"
+            android:textSize="30sp"/> </LinearLayout>
 
     <!--This is for 7, 8, 9, and Multiplication-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="15">
 
         <Button
             android:id="@+id/seven"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/seven" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/seven"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/eight"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/eight" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/eight"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/nine"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/nine" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/nine"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/multiplication"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/multiplication" /> </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/multiplication"
+            android:onClick="onClickSigns"
+            android:textSize="30sp"/> </LinearLayout>
 
     <!--This is for 4, 5, 6, and subtraction-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="15">
 
         <Button
             android:id="@+id/four"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/four" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/four"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/five"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/five" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/five"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/six"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/six" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/six"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/subtraction"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/subtraction" /> </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/subtraction"
+            android:onClick="onClickSigns"
+            android:textSize="30sp"/> </LinearLayout>
 
     <!--This is for 1, 2, 3, and addition-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="15">
 
         <Button
             android:id="@+id/one"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/one" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/one"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/two"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/two" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/two"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/three"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/three" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/three"
+            android:onClick="onClick"
+            android:textSize="30sp"/>
+
         <Button
             android:id="@+id/addition"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/addition" /> </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="onClickSigns"
+            android:text="@string/addition"
+            android:textSize="30sp"/> </LinearLayout>
 
     <!--This is for 0, decimal, and equals-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:weightSum="1">
 
         <Button
             android:id="@+id/zero"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".50"
-            android:text="@string/zero" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/zero"
+            android:onClick="onClick"
+            android:textSize="30sp"
+            android:layout_weight="0.59" />
         <Button
             android:id="@+id/decimal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/decimal" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/decimal"
+            android:onClick="onClickSigns"
+            android:textSize="30sp"/>
         <Button
             android:id="@+id/equals"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="@string/equals" /> </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/equals"
+            android:onClick="Calculate"
+            android:textSize="30sp"/> </LinearLayout>
 
 
 </LinearLayout>
