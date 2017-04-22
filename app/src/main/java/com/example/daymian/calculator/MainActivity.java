@@ -14,8 +14,15 @@ public class MainActivity extends AppCompatActivity {
 
     // Declaring sum things
     private TextView screen;
-    private String str1, str2, result, str, sign;
-    private double a, b;
+    private String str1;
+    private String str2;
+    private String result;
+    private String str;
+    private String sign = "";
+    public double a;
+    public double b;
+
+    public double[] thing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +39,29 @@ public class MainActivity extends AppCompatActivity {
         Button number = (Button)view;
         str = number.getText().toString();
         screen.setText(str);
-        a = Double.parseDouble(str);
+
+        if (sign.equals("")) {
+            a = Double.parseDouble(str);
+        } else {
+            b = Double.parseDouble(str);
+        }
+
     }
 
     public void onClickSigns(View view) {
         Button operand = (Button)view;
+        screen.setText(sign);
         sign = operand.getText().toString();
 
         if (sign.contains("AC")) {
             screen.setText("0");
             a = 0.0;
             b = 0.0;
+            sign = "";
+            result = "";
+        } else if (sign.contains("+/-")) {
+            a = (-1 * a);
+            screen.setText(a + "");
         } else {
             screen.setText(sign);
             str = "";
@@ -68,13 +87,11 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(sign.equals("%")) {
             result = (a % b) + "";
-        }
-        else if(sign.equals("+/-")) {
-            result = (-1 * a) + "";
-        }
-        else {
+        } else {
             result = "wrong";
         }
         screen.setText(result);
+        a = Double.parseDouble(result);
+        sign = "";
     }
 }
